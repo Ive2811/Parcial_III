@@ -29,11 +29,11 @@ router.get('/home', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  res.render(loginPage);
+  res.render(loginPage, { title: 'Iniciar Sesión' });
 });
 
 router.get('/register', (req, res) => {
-  res.render(registerPage);
+  res.render(registerPage, { title: 'Registrarse' });
 });
 
 router.post('/register', async (req,res) => {
@@ -45,7 +45,7 @@ router.post('/register', async (req,res) => {
       if(user) {
         res.render(registerPage,{
         message:"El usuario ya está registrado.",
-        messageClass: "alert-danger"
+        messageClass: "alert-danger d-flex align-items-center alert-dismissible fade show"
       });
 
     }else{
@@ -59,14 +59,14 @@ router.post('/register', async (req,res) => {
     
     res.render(loginPage, {
       message: "Registro exitoso. Inicie sesión.",
-      messageClass: "alert-success"
+      messageClass: "alert-success d-flex align-items-center alert-dismissible fade show"
     });
   }
 })
   }else {
     res.render(registerPage, {
-      message: "Las contraseñas no coinciden",
-      messageClass: "alert-danger"
+      message: "Las contraseñas no coinciden.",
+      messageClass: "alert-danger d-flex align-items-center alert-dismissible fade show"
     });
   }
 });
@@ -84,7 +84,7 @@ router.post('/register', async (req,res) => {
       } else {
         res.render(loginPage, {
           message: "Usuario o clave inválidos.",
-          messageClass: "alert-danger"
+          messageClass: "alert-danger d-flex align-items-center alert-dismissible fade show"
         });
       }
     })
