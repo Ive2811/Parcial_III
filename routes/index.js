@@ -9,11 +9,24 @@ const User = require('../models/user');
 const loginPage = "../views/pages/login";
 const registerPage ="../views/pages/register";
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Senior Help App' });
 });
 
+router.get('/capacitacion', function(req, res, next) {
+  res.render('capacitacion', { title: 'Senior Help App' });
+});
+router.get('/datos', function(req, res, next) {
+  res.render('datos', { title: 'Usos Basicos del Celular' });
+});
+router.get('/appi', function(req, res, next) {
+  res.render('appi', { title: 'Aplicaciones Basicas' });
+});
+router.get('/dont', function(req, res, next) {
+  res.render('dont', { title: 'Cosas que no debes de hacer' });
+});
 //Registro de rutas.
 router.get('/home', (req, res) => {
   if(req.user){
