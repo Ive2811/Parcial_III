@@ -6,7 +6,7 @@ const Op = db.Sequelize.Op
 exports.create = (req, res) => {
     if(!req.body.nombre) {
         res.status(400).send({
-            message: "El nombre no puede estar vacio"
+            message: "El nombre no puede estar vacío."
         });
     }
 
@@ -22,7 +22,7 @@ exports.create = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al crear un nuevo cliente"
+                    err.message  || "Ocurrió un error al crear un nuevo cliente."
             })
         })
 
@@ -37,14 +37,14 @@ exports.findOne = (req, res) => {
                 res.send(data);
             } else {
                 res.status(400).send({
-                    message: "No se encontro el cliente" + id
+                    message: "No se encontró el cliente" + id
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al encontrar el cliente" + id
+                    err.message  || "Ocurrió un error al encontrar el cliente" + id
             })
         })
 }
@@ -59,7 +59,7 @@ exports.findAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al encontrar el cliente" 
+                    err.message  || "Ocurrió un error al encontrar el cliente" 
             })
         })
 }
@@ -72,18 +72,18 @@ exports.update = (req, res) => {
         .then(num => {
             if (num == 1){
                 res.send({
-                    message: "Se actualizo el nombre"
+                    message: "Se actualizó el nombre"
                 });
             } else {
                 res.send ({
-                    message: "No se pudo actualizar el registro con exito"
+                    message: "No se pudo actualizar el registro con éxito"
                 })
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al actualizar el cliente" 
+                    err.message  || "Ocurrió un error al actualizar el cliente" 
             })
         })
 
@@ -97,18 +97,18 @@ exports.delete = (req, res) => {
         .then(num => {
             if (num == 1){
                 res.send({
-                    message: "Se elimino el cliente"
+                    message: "Se eliminó el cliente"
                 });
             } else {
                 res.send ({
-                    message: "No se pudo eliminar el registro con exito"
+                    message: "No se pudo eliminar el registro con éxito"
                 })
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al eliminar el cliente" 
+                    err.message  || "Ocurrió un error al eliminar el cliente" 
             })
         })
 
@@ -122,14 +122,14 @@ exports.clientReminders = (req, res) => {
                 res.send(data);
             } else {
                 res.status(400).send({
-                    message: "No se encontro el cliente" + id
+                    message: "No se encontró el cliente" + id
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al encontrar el cliente" + id
+                    err.message  || "Ocurrió un error al encontrar el cliente" + id
             })
         })
 }

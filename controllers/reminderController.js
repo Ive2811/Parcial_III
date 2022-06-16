@@ -6,7 +6,7 @@ const Op = db.Sequelize.Op
 exports.create = (req, res) => {
     if(!req.body.titulo) {
         res.status(400).send({
-            message: "El titulo no puede estar vacio"
+            message: "El titulo no puede estar vacío."
         });
     }
 
@@ -24,7 +24,7 @@ exports.create = (req, res) => {
     .catch(err => {
         res.status(500).send({
             message:
-                err.message  || "Ocurrio un error al crear un nuevo recordatorio"
+                err.message  || "Ocurrió un error al crear un nuevo recordatorio."
         })
     })
 }
@@ -37,14 +37,14 @@ exports.findOne = (req, res) => {
                 res.send(data);
             } else {
                 res.status(400).send({
-                    message: "No se encontro el recordatorio" + id
+                    message: "No se encontró el recordatorio" + id
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al encontrar el recordatorio" + id
+                    err.message  || "Ocurrió un error al encontrar el recordatorio" + id
             })
         })
 }
@@ -59,7 +59,7 @@ exports.findAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al encontrar el recordatorio" 
+                    err.message  || "Ocurrió un error al encontrar el recordatorio" 
             })
         })
 }
@@ -72,18 +72,18 @@ exports.update = (req, res) => {
         .then(num => {
             if (num == 1){
                 res.send({
-                    message: "Se actualizo el registro"
+                    message: "Se actualizó el registro"
                 });
             } else {
                 res.send ({
-                    message: "No se pudo actualizar el registro con exito"
+                    message: "No se pudo actualizar el registro con éxito"
                 })
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al actualizar el recordatorio" 
+                    err.message  || "Ocurrió un error al actualizar el recordatorio" 
             })
         })
 
@@ -97,18 +97,18 @@ exports.delete = (req, res) => {
         .then(num => {
             if (num == 1){
                 res.send({
-                    message: "Se elimino el recordatorio"
+                    message: "Se eliminó el recordatorio."
                 });
             } else {
                 res.send ({
-                    message: "No se pudo eliminar el recordatorio con exito"
+                    message: "No se pudo eliminar el recordatorio con éxito."
                 })
             }
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message  || "Ocurrio un error al eliminar el recordatorio" 
+                    err.message  || "Ocurrió un error al eliminar el recordatorio." 
             })
         })
 
