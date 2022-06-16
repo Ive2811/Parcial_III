@@ -1,7 +1,7 @@
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "usbw16",
+    PASSWORD: "usbw",
     DB: "apirest",
     dialect: "mysql",
     pool: {
