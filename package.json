@@ -8,11 +8,28 @@
   "dependencies": {
     "body-parser": "^1.20.0",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "mongoose": "^6.3.4",
-    "morgan": "~1.9.1"
-  }
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ive2811/Parcial_III.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ive2811/Parcial_III/issues"
+  },
+  "homepage": "https://github.com/Ive2811/Parcial_III#readme",
+  "devDependencies": {},
+  "description": ""
 }
